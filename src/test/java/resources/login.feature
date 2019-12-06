@@ -7,8 +7,8 @@ Feature: Transaction search
     Given user is on log in page
     When user enters valid credentials
     And click on Sign in button
-    Then user is logged in and on homepage
-    And user clicks on "Transaction Search" link
+    Then user is logged in
+    And user clicks on Transaction Search link
     Then user should able to navigate to search page successfully
     When user enters transaction number as "CA001111/P01"
     And click on search button

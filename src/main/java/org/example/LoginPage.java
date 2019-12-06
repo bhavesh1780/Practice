@@ -12,7 +12,7 @@ public class LoginPage extends Utils {
     public void userEnterValidCredentiala(){
         typeText(By.id("userName"), "cinvapay1111");
         typeText(By.id("password"), "J4cy+YnD");
-        clickOnElement(By.id("buttonSubmitLogin"));
+//        clickOnElement(By.id("buttonSubmitLogin"));
 
     }
 

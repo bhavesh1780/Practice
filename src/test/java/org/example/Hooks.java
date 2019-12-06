@@ -1,9 +1,8 @@
 package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Hooks extends BasePage {

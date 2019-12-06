@@ -8,6 +8,7 @@ import cucumber.api.java.en.When;
 
 public class MyStepdefs {
 
+    HomePage homePage =new HomePage();
     LoginPage loginPage = new LoginPage();
 
 
@@ -27,33 +28,33 @@ public class MyStepdefs {
         loginPage.userClickOnSigninButton();
     }
 
-    @Then("^user is logged in and on homepage$")
+    @Then("^user is logged in$")
     public void userIsLoggedInAndOnHomepage() {
+        homePage.userIsLoggedInSuccessfully();
     }
 
-    @And("^user clicks on \"([^\"]*)\" link$")
-    public void userClicksOnLink(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    @And("^user clicks on Transaction Search link$")
+    public void userClicksOnTransactionSearchLink() {
+        homePage.userClickOnLink();
     }
 
     @Then("^user should able to navigate to search page successfully$")
     public void userShouldAbleToNavigateToSearchPageSuccessfully() {
+        homePage.verifyUserIsOnTransactionPage();
     }
 
     @When("^user enters transaction number as \"([^\"]*)\"$")
-    public void userEntersTransactionNumberAs(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void userEntersTransactionNumberAs(String transactionNo){
+        homePage.userEntersTransactionNo(transactionNo);
     }
 
     @And("^click on search button$")
     public void clickOnSearchButton() {
+        homePage.userClicksOnSearchButton();
     }
 
     @Then("^user should able to see all related transactions for \"([^\"]*)\"$")
-    public void userShouldAbleToSeeAllRelatedTransactionsFor(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void userShouldAbleToSeeAllRelatedTransactionsFor(String transactionNo){
+        homePage.verifyTransactionNoAppearsInSearchResult(transactionNo);
     }
 }
